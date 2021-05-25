@@ -1,6 +1,12 @@
+import React from 'react';
 import Expense from './component/Expense.js';
+import NewExpense from './component/NewExpense/NewExpense.js';
 
 function App() {
+  const addExpense = function(expenseData) {
+    console.log(expenseData);
+  };
+
   const expenses = [
     {
       id: 'e1',
@@ -30,7 +36,7 @@ function App() {
 
   return (
       <div>
-        <h2>Let's get started!</h2>
+        <NewExpense onAddExpense={addExpense}/>
         <Expense items={expenses}/>
       </div>
   );
