@@ -5,6 +5,7 @@ import './NewExpense.css';
 function NewExpense(props) {
   const saveExpense = function(expenseData) {
     const expense = {
+      id: Math.random().toString(),
       ...expenseData,
     };
 
