@@ -13,11 +13,14 @@ function Expense(props) {
 
   const expenseFilter = props.items.filter(el => el.date.getFullYear().toString() === filteredYear);
 
+  const condition = expenseFilter.length === 0 ? <p>There is no item</p> :
+      expenseFilter.map((el) => (<ExpenseItem key={el.id} title={el.title} date={el.date} amount={el.amount}/>));
+
   return (
       <div>
         <Card className="expense">
           <ExpenseFilter selected={filteredYear} onDropDownHandler={dropDownHandler}/>
-          {expenseFilter.map((el) => (<ExpenseItem key={el.id} title={el.title} date={el.date} amount={el.amount}/>))}
+          {condition}
         </Card>
       </div>
   );
