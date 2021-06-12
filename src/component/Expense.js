@@ -21,6 +21,7 @@ function Expense(props) {
         <Card className="expense">
           <ExpenseFilter selected={filteredYear} onDropDownHandler={dropDownHandler}/>
           {condition}
+
         </Card>
       </div>
   );
