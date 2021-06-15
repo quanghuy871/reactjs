@@ -12,7 +12,6 @@ function ExpenseItem(props) {
             <h2>{props.title}</h2>
             <span className="expense-item__price">${props.amount}</span>
           </div>
-
         </Card>
       </li>
   );
