@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ExpenseForm from './ExpenseForm.js';
 import './NewExpense.css';
 
@@ -10,11 +10,18 @@ function NewExpense(props) {
     };
 
     props.onAddExpense(expense);
+    statefunc(<button onClick={openAddExpense}>Add New Expense</button>);
   };
+
+  const openAddExpense = function() {
+    statefunc(<ExpenseForm onSaveExpense={saveExpense}/>);
+  };
+
+  const [state, statefunc] = useState(<button onClick={openAddExpense}>Add New Expense</button>);
 
   return (
       <div className="new-expense">
-        <ExpenseForm onSaveExpense={saveExpense}/>
+        {state}
       </div>
   );
 }

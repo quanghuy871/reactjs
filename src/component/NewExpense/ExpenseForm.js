@@ -36,7 +36,9 @@ function ExpenseForm(props) {
     setTitle('');
     setAmount('');
     setDate('');
+    props.onSaveExpense();
   };
+
 
   return (
       <form onSubmit={submitHandler}>
