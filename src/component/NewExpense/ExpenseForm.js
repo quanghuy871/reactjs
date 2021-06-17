@@ -36,7 +36,7 @@ function ExpenseForm(props) {
     setTitle('');
     setAmount('');
     setDate('');
-    props.oncloseExpense();
+    props.oncloseExpense(title);
   };
 
   return (
