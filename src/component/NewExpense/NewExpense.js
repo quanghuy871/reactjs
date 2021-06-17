@@ -17,7 +17,6 @@ function NewExpense(props) {
     statefunc(<ExpenseForm onSaveExpense={saveExpense}/>);
   };
 
-
   const [state, statefunc] = useState(<button onClick={openAddExpense}>Add New Expense</button>);
 
   return (
