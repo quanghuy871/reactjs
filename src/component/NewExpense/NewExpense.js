@@ -10,11 +10,14 @@ function NewExpense(props) {
     };
 
     props.onAddExpense(expense);
+  };
+
+  const closeExpense = function() {
     statefunc(<button onClick={openAddExpense}>Add New Expense</button>);
   };
 
   const openAddExpense = function() {
-    statefunc(<ExpenseForm onSaveExpense={saveExpense}/>);
+    statefunc(<ExpenseForm oncloseExpense={closeExpense} onSaveExpense={saveExpense}/>);
   };
 
   const [state, statefunc] = useState(<button onClick={openAddExpense}>Add New Expense</button>);
