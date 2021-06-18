@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import ExpenseFilter from './ExpenseFilter.js';
-import Card from '../UI/Card.js';
+import Card from './UI/Card.js';
 import './Expense.css';
+import ExpenseChart from './ExpenseChart.js';
 import ExpenseList from './ExpenseList.js';
 
 function Expense(props) {
@@ -17,7 +18,8 @@ function Expense(props) {
       <div>
         <Card className="expense">
           <ExpenseFilter selected={filteredYear} onDropDownHandler={dropDownHandler}/>
-          <ExpenseList items={expenseFilter} />
+          <ExpenseChart expenses={expenseFilter}/>
+          <ExpenseList items={expenseFilter}/>
         </Card>
       </div>
   );
