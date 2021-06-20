@@ -43,6 +43,7 @@ function App() {
         <NewExpense onAddExpense={addExpense}/>
         <Expense items={expenses}/>
       </div>
+
   );
 }
 
